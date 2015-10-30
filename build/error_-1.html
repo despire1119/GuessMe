@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<img src="./images/space.png" data-src="./images/space.png" baseurl="./assets/" height="1" width="1" alt="">-->
+
+    <meta charset="utf-8">
+    <title>猜价格赢免单!</title>
+    <meta name="keywords" content="&#x731C;&#x4EF7;&#x683C;&#x8D62;&#x514D;&#x5355;!">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="&#x9879;&#x76EE;&#x63CF;&#x8FF0;">
+    <meta name="wep-font-scale" content="no">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <meta http-equiv="cache-control" content="no-siteapp">
+    <meta http-equiv="cache-control" content="no-transform">
+    <link rel="shortcut icon" href="http://www.suning.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+<body style="background:#eaeaea;">
+<script>
+    (function (win) {
+        var html = document.documentElement;
+
+        function setRem() {
+            var width = document.body.offsetWidth / 10;
+            html.style.fontSize = width + "px";
+        }
+
+        setRem();
+        win.onresize = setRem;
+    })(window);
+</script>
+
+<!--main-begin-->
+<div class="error">
+    <p class="error-contain">出错啦</p>
+</div>
+<p class="error-assist">请稍候再试</p>
+<a href="http://ju.m.suning.com/wap/scode/index_1.htm" class="r-e-btn err-btn">更多S码商品</a>
+<!--end-->
+
+<script src="./assets/js/zepto.min.js"></script>
+<script src="./assets/js/common.js?v=20151026"></script>
+<script src="./assets/js/global.js?v=20151026"></script>
+<script src="./assets/js/wxShare_dev.js?v=20151026"></script>
+<script>
+    wxShare.loadJWeixin()
+</script>
+</body>
+</html>
