@@ -128,8 +128,8 @@
     <p class="title">佳能佳能佳能佳能佳能佳能佳能佳能</p>
 
     <p class="get-pri">
-        &yen;<input id="yuan" maxlength="4" type="text" placeholder="0000">
-        &dot;<input id="fen" maxlength="1" type="text" placeholder="0">
+        &yen;<input id="yuan" maxlength="4" type="tel" placeholder="0000">
+        &dot;<input id="fen" maxlength="1" type="tel" placeholder="0">
     </p>
 
     <p class="tips">请输入价格</p>
@@ -178,12 +178,12 @@
 <script>
     function coverShow() {
         var h = $(window).height()
-        $('html').css({'overflow': 'hidden', 'height': h})
+        $('html,body').css({'overflow': 'hidden', 'height': h})
         $('.cover').removeClass('hide')
         $('.det-toolbar').addClass('hide')
     }
     function coverRemove() {
-        $('html').css('overflow', 'auto')
+        $('html,body').css('overflow', 'auto')
         $('.cover').addClass('hide')
         $('.det-toolbar').removeClass('hide')
     }
@@ -220,7 +220,7 @@
 
         //手机号提交验证
         pophandler: function () {
-            $('.pop-close').on('click', function () {
+            $('.pop-close').on('tap', function () {
                 coverRemove()
                 $(this).parent().addClass('hide')
             })
@@ -250,6 +250,11 @@
             })
             $('.totop').on('click', function () {
                 $(window).scrollTop(0)
+            })
+            $('#yuan,#fen').on('focus', function () {
+                $('#guess-pri').css('top', '0')
+            }).on('blur', function () {
+                $('#guess-pri').css('top', '')
             })
         },
         toinit: function () {

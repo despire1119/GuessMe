@@ -29,6 +29,7 @@ function g(actionId, callback) {
         return str;
     }
     var env = getEnv()
+    env= 'pre'
     var wxToken = {
         pre: 'http://lightpre.cnsuning.com/guess/getWechatToken.do?url=',
         prd: 'http://light.suning.com/guess/getWechatToken.do?url=',

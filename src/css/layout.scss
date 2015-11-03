@@ -330,12 +330,14 @@ body {
   }
   .close {
     display: block;
+    position: relative;
+    z-index: 10000;
+    background: #ffffff;
     text-align: center;
     font-size: .44rem;
     color: #cacaca;
     margin: 0;
     padding: 0;
-    //border-top: .04rem solid #cacaca;
     height: 1.3rem;
     line-height: 1.3rem;
   }
@@ -369,6 +371,7 @@ body {
   height: 100%;
   background: #000;
   opacity: .7;
+  z-index: 101;
 }
 .share-helper{
   position: fixed;
@@ -773,7 +776,7 @@ body {
 }
 
 .detail-error {
-  position: absolute;
+  position: fixed;
   top: 5rem;
   left: 2rem;
   width: 6.3rem;
@@ -781,6 +784,7 @@ body {
   background: url("images/detail_over.png") no-repeat;
   -webkit-background-size: 100%;
   background-size: cover;
+  z-index: 102;
   p.error-contain {
     position: absolute;
     top: 2.3rem;
@@ -793,9 +797,10 @@ body {
 
 .act-over {
   p.cp-toolbar {
-    position: absolute;
+    position: fixed;
     top: 10rem;
     padding: 0 1rem;
+    z-index: 102;
     a {
       display: block;
       float: left;

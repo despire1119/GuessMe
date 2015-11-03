@@ -52,7 +52,8 @@ $(function () {
         $('#guess-pri').find('.title').html(b)
         $('#guess-pri').find('input').val('')
         $('#guess-pri').removeClass('hide')
-        $('#guess-pri').find('.en-can').on('click', function () {
+        $('#guess-pri').find('.en-can').on('tap', function () {
+            $('#yuan,#fen').blur()
             $('#guess-pri').addClass('hide')
             coverRemove()
         })
@@ -115,7 +116,6 @@ $(function () {
                 window.location.href = g().error_2
             case 3:
                 infoInit()
-                coverShow()
                 coverToolBar()
                 break
         }
@@ -276,7 +276,8 @@ $(function () {
         }
 
         //猜价提交
-        $('#guess-pri').find('.en-btn').on('click', function () {
+        $('#guess-pri').find('.en-btn').on('tap', function () {
+            $('#yuan,#fen').blur()
             var yuan = $('#yuan').val()
             var fen = $('#fen').val()
             if (yuan == '' && fen == '') {
